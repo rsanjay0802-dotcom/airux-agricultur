@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agricultural Products - Airux Global</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+font-family:Arial,sans-serif;
+background:#f3f3f3;
+color:#222;
+}
+
+/* NAVBAR */
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:12px 25px;
+background:#fff;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+position:sticky;
+top:0;
+z-index:1000;
+overflow:visible;
+}
+
+.left-menu,.right-menu{
+width:33%;
+display:flex;
+gap:18px;
+align-items:center;
+}
+
+.right-menu{
+justify-content:flex-end;
+}
+
+.center-logo{
+width:34%;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:12px;
+}
+
+.center-logo img{
+height:78px;
+}
+
+.brand{
+font-size:32px;
+font-weight:700;
+color:#0b3d2e;
+}
+
+.left-menu a{
+text-decoration:none;
+color:#222;
+font-weight:bold;
+}
+
+/* DROPDOWN FIX */
+.dropdown{
+position:relative;
+display:inline-block;
+}
+
+.dropbtn{
+cursor:pointer;
+font-weight:bold;
+text-decoration:none;
+color:#222;
+padding:8px 0;
+display:inline-block;
+}
+
+.dropdown-content{
+display:none;
+position:absolute;
+top:100%;
+left:0;
+min-width:270px;
+background:#fff;
+box-shadow:0 8px 20px rgba(0,0,0,.12);
+border-radius:10px;
+overflow:hidden;
+z-index:9999;
+}
+
+.dropdown-content a{
+display:block;
+padding:14px 18px;
+text-decoration:none;
+color:#222;
+font-weight:600;
+border-bottom:1px solid #eee;
+transition:.3s;
+white-space:nowrap;
+}
+
+.dropdown-content a:hover{
+background:#f3faf3;
+padding-left:24px;
+color:#0b3d2e;
+}
+
+.dropdown:hover .dropdown-content{
+display:block;
+}
+
+/* BUTTON */
+.btn{
+background:#ff6600;
+color:#fff;
+border:none;
+padding:12px 22px;
+border-radius:6px;
+font-weight:bold;
+cursor:pointer;
+}
+
+/* HERO */
+.hero{
+height:320px;
+background:url('agriculture-banner.jpg') center/cover no-repeat;
+}
+
+/* TITLE */
+.title{
+text-align:center;
+font-size:38px;
+color:#0b3d2e;
+padding:40px 15px 20px;
+font-weight:bold;
+}
+
+/* PRODUCTS */
+.products{
+max-width:1200px;
+margin:auto;
+padding:10px 20px 60px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:35px;
+}
+
+.card{
+background:#fff;
+padding:18px;
+border-radius:16px;
+box-shadow:0 8px 18px rgba(0,0,0,.08);
+text-align:center;
+}
+
+.card img{
+width:100%;
+height:280px;
+object-fit:cover;
+border-radius:12px;
+}
+
+.card h3{
+font-size:24px;
+margin:16px 0 14px;
+}
+
+.read-btn{
+display:inline-block;
+padding:12px 28px;
+border:2px solid #ff6600;
+color:#ff6600;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+}
+
+.read-btn:hover{
+background:#ff6600;
+color:#fff;
+}
+
+/* FOOTER */
+.footer-top{
+background:#003b8f;
+color:#fff;
+padding:35px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:35px;
+}
+
+.footer-top h3{margin-bottom:15px;}
+.footer-top p{margin:10px 0;}
+
+.footer-bottom{
+background:#ff5a1f;
+color:#fff;
+padding:14px 20px;
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+}
+
+.socials{
+display:flex;
+gap:18px;
+}
+
+.socials a{
+color:#fff;
+text-decoration:none;
+font-size:26px;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+.navbar{
+flex-direction:column;
+gap:15px;
+}
+
+.left-menu,.center-logo,.right-menu{
+width:100%;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.brand{font-size:26px;}
+.hero{height:220px;}
+.title{font-size:30px;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+
+<div class="left-menu">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+
+<div class="dropdown">
+<a href="#" class="dropbtn">Products ▼</a>
+
+<div class="dropdown-content">
+<a href="agriculture.html">1. Agricultural Products</a>
+</div>
+</div>
+
+<a href="contact.html">Contact</a>
+</div>
+
+<div class="center-logo">
+<img src="logo.png">
+<div class="brand">Airux Global</div>
+</div>
+
+<div class="right-menu">
+<button class="btn">Request Quote</button>
+</div>
+
+</div>
+
+<!-- HERO -->
+<div class="hero"></div>
+
+<!-- TITLE -->
+<div class="title">Agricultural Products</div>
+
+<!-- PRODUCTS -->
+<div class="products">
+
+<div class="card">
+<img src="basmati.jpg">
+<h3>Basmati Rice</h3>
+<a href="basmati-details.html" class="read-btn">READ MORE</a>
+</div>
+
+<div class="card">
+<img src="nonbasmati.jpg">
+<h3>Non Basmati Rice</h3>
+<a href="nonbasmati-details.html" class="read-btn">READ MORE</a>
+</div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer-top">
+
+<div>
+<h3>Quick Links</h3>
+<p><a href="index.html">Home</a></p>
+<p><a href="about.html">About Us</a></p>
+<p><a href="agriculture.html">Products</a></p>
+<p><a href="contact.html">Contact us</a></p>
+</div>
+<style>
+.footer-top a{color:#fff;text-decoration:none;}
+.footer-top a:hover{text-decoration:underline;}
+</style>
+
+<div>
+<h3>Get in Touch</h3>
+<p>📞 +91 6354132629</p>
+<p>✉️ airuxglobal@gmail.com</p>
+<p>📍 Surat, Gujarat, India</p>
+</div>
+
+<div>
+<h3>Product</h3>
+<p><a href="agriculture.html">Agricultural Products</a></p>
+</div>
+
+<div>
+<h3>Membership</h3>
+<p>Proud Member of Trade Council</p>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+<div>© 2026 Airux Global Export. All Rights Reserved</div>
+
+<div class="socials">
+<a href="#">f</a>
+<a href="#">in</a>
+<a href="#">◎</a>
+</div>
+</div>
+
+</body>
+</html>

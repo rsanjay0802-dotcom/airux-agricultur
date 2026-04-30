@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Airux Global Export</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{
+width:100%;
+overflow-x:hidden;
+font-family:Arial,sans-serif;
+background:#fff;
+}
+
+/* NAVBAR */
+.navbar{
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:12px 25px;
+background:#fff;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.left-menu,.right-menu{
+width:33%;
+display:flex;
+align-items:center;
+gap:18px;
+}
+
+.right-menu{justify-content:flex-end;}
+
+.center-logo{
+width:34%;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:12px;
+}
+
+.center-logo img{height:78px;}
+
+.brand{
+font-size:32px;
+font-weight:700;
+color:#0b3d2e;
+}
+
+.left-menu a,.footer-link{
+text-decoration:none;
+font-weight:bold;
+color:#222;
+}
+
+.footer-link{
+color:#fff;
+font-weight:normal;
+display:block;
+margin:10px 0;
+}
+
+.footer-link:hover{
+text-decoration:underline;
+}
+
+/* DROPDOWN */
+.dropdown{position:relative;}
+.dropbtn{
+cursor:pointer;
+font-weight:bold;
+color:#222;
+text-decoration:none;
+}
+
+.dropdown-content{
+display:none;
+position:absolute;
+top:100%;
+left:0;
+min-width:270px;
+background:#fff;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+border-radius:10px;
+overflow:hidden;
+z-index:999;
+}
+
+.dropdown-content a{
+display:block;
+padding:14px 18px;
+text-decoration:none;
+color:#222;
+font-weight:600;
+border-bottom:1px solid #eee;
+}
+
+.dropdown-content a:hover{
+background:#f3faf3;
+padding-left:24px;
+color:#0b3d2e;
+}
+
+.dropdown:hover .dropdown-content{
+display:block;
+}
+
+/* BUTTON */
+.btn{
+background:#ff6600;
+color:#fff;
+border:none;
+padding:12px 22px;
+border-radius:6px;
+font-weight:bold;
+cursor:pointer;
+}
+
+/* HERO */
+.hero{
+background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url('hero.jpg') center/cover no-repeat;
+padding:140px 20px;
+text-align:center;
+color:#fff;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:18px;
+margin-bottom:20px;
+}
+
+/* SECTION */
+.section{
+padding:60px 20px;
+}
+
+.title{
+text-align:center;
+font-size:34px;
+color:#0b3d2e;
+margin-bottom:30px;
+}
+
+/* GRID */
+.cards,.grid,.why,.team-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.card,.box{
+background:#fff;
+border-radius:14px;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover,.box:hover,.team-card:hover{
+transform:translateY(-8px);
+}
+
+.card img,.box img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card h3,.box h3{
+background:#2e7d32;
+color:#fff;
+padding:16px;
+text-align:center;
+font-size:20px;
+}
+
+.box-link{
+text-decoration:none;
+color:inherit;
+display:block;
+}
+
+/* WHY */
+.why-box{
+padding:28px;
+border-radius:16px;
+background:linear-gradient(135deg,#e6f4ea,#c8e6c9);
+box-shadow:0 10px 22px rgba(0,0,0,.08);
+text-align:center;
+font-weight:bold;
+font-size:20px;
+color:#1b5e20;
+}
+
+/* TEAM */
+.team-section{
+background:#f3f3f3;
+}
+
+.team-card{
+background:#fff;
+border-radius:20px;
+padding:30px 20px;
+text-align:center;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.team-card img{
+width:220px;
+height:220px;
+object-fit:cover;
+border-radius:50%;
+border:10px solid #eef2f3;
+margin-bottom:20px;
+}
+
+.team-card h3{
+font-size:28px;
+margin-bottom:8px;
+}
+
+.team-card p{
+font-size:18px;
+margin:6px 0;
+color:#444;
+}
+
+/* GLOBAL REACH */
+.reach img{
+width:100%;
+display:block;
+}
+
+/* FOOTER */
+.footer-top{
+background:#003b8f;
+color:#fff;
+padding:45px 40px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+}
+
+.footer-top h3{
+margin-bottom:18px;
+}
+
+.footer-top p{
+margin:10px 0;
+line-height:1.6;
+}
+
+.footer-bottom{
+background:#ff5a1f;
+color:#fff;
+padding:14px 25px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.socials{
+display:flex;
+gap:14px;
+}
+
+.socials a{
+color:#fff;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+left:20px;
+bottom:20px;
+background:#25D366;
+color:#fff;
+padding:16px;
+border-radius:50%;
+text-decoration:none;
+font-size:22px;
+z-index:1000;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+.navbar{
+flex-direction:column;
+gap:15px;
+}
+.left-menu,.center-logo,.right-menu{
+width:100%;
+justify-content:center;
+flex-wrap:wrap;
+}
+.brand{font-size:28px;}
+.hero h1{font-size:34px;}
+.footer-bottom{
+flex-direction:column;
+gap:10px;
+text-align:center;
+}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+
+<div class="left-menu">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+
+<div class="dropdown">
+<a href="agriculture.html" class="dropbtn">Products ▼</a>
+
+<div class="dropdown-content">
+<a href="agriculture.html">1. Agricultural Products</a>
+</div>
+</div>
+
+<a href="contact.html">Contact</a>
+</div>
+
+<div class="center-logo">
+<img src="logo.png">
+<div class="brand">Airux Global</div>
+</div>
+
+<div class="right-menu">
+<button class="btn">Request Quote</button>
+</div>
+
+</div>
+
+<!-- HERO -->
+<div class="hero">
+<h1>Your Trusted Export Partner</h1>
+<p>Connecting Your Business to the World</p>
+<button class="btn">Get Started</button>
+</div>
+
+<!-- FEATURES -->
+<div class="section">
+<div class="cards">
+
+<div class="card">
+<img src="shipping.jpg">
+<h3>Global Shipping</h3>
+</div>
+
+<div class="card">
+<img src="quality.jpg">
+<h3>Quality Products</h3>
+</div>
+
+<div class="card">
+<img src="trusted.jpg">
+<h3>Trusted Network</h3>
+</div>
+
+</div>
+</div>
+
+<!-- CATEGORY -->
+<div class="section">
+<h2 class="title">Our Export Categories</h2>
+
+<div class="grid">
+
+<a href="agriculture.html" class="box-link">
+<div class="box">
+<img src="agri.jpg">
+<h3>Agricultural Products</h3>
+</div>
+</a>
+
+</div>
+</div>
+
+<!-- WHY -->
+<div class="section">
+<div class="why">
+<div class="why-box">Experience & Expertise</div>
+<div class="why-box">Customized Solutions</div>
+<div class="why-box">Reliable Support</div>
+</div>
+</div>
+
+<!-- TEAM -->
+<div class="section team-section">
+<h2 class="title">Our Team</h2>
+
+<div class="team-grid">
+
+<div class="team-card">
+<img src="team1.png">
+<h3>Mr. Sanjay Rana</h3>
+<p>Managing Director</p>
+<p>Airux Global Export</p>
+</div>
+
+<div class="team-card">
+<img src="team2.png">
+<h3>Mr. Shakti Singh</h3>
+<p>Founder & Partner</p>
+<p>Airux Global Export</p>
+</div>
+
+</div>
+</div>
+
+<!-- GLOBAL REACH -->
+<div class="reach">
+<img src="globalreach.png">
+</div>
+
+<!-- FOOTER -->
+<div class="footer-top">
+
+<div>
+<h3>Quick Links</h3>
+<a href="index.html" class="footer-link">Home</a>
+<a href="about.html" class="footer-link">About Us</a>
+<a href="agriculture.html" class="footer-link">Products</a>
+<a href="contact.html" class="footer-link">Contact us</a>
+</div>
+
+<div>
+<h3>Get in Touch</h3>
+<p>📞 +91 6354132629</p>
+<p>📧 airuxglobal@gmail.com</p>
+<p>📍 Surat, Gujarat, India</p>
+</div>
+
+<div>
+<h3>Product</h3>
+<a href="agriculture.html" class="footer-link">Agricultural Products</a>
+</div>
+
+<div>
+<h3>Membership</h3>
+<p>Proud Member of Trade Council</p>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+<div>© 2026 Airux Global Export. All Rights Reserved</div>
+
+<div class="socials">
+<a href="#">f</a>
+<a href="#">in</a>
+<a href="#">◎</a>
+</div>
+</div>
+
+<a href="https://wa.me/916354132629" class="whatsapp">💬</a>
+
+</body>
+</html>

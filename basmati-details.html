@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Basmati Rice - Airux Global</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+font-family:Arial,sans-serif;
+background:#f3f3f3;
+color:#222;
+}
+
+/* NAVBAR */
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:12px 25px;
+background:#fff;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+position:sticky;
+top:0;
+z-index:1000;
+overflow:visible;
+}
+
+.left-menu,.right-menu{
+width:33%;
+display:flex;
+gap:18px;
+align-items:center;
+}
+
+.right-menu{justify-content:flex-end;}
+
+.center-logo{
+width:34%;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:12px;
+}
+
+.center-logo img{height:78px;}
+
+.brand{
+font-size:32px;
+font-weight:700;
+color:#0b3d2e;
+}
+
+.left-menu a{
+text-decoration:none;
+color:#222;
+font-weight:bold;
+}
+
+/* DROPDOWN */
+.dropdown{
+position:relative;
+display:inline-block;
+}
+
+.dropbtn{
+cursor:pointer;
+font-weight:bold;
+text-decoration:none;
+color:#222;
+padding:8px 0;
+display:inline-block;
+}
+
+.dropdown-content{
+display:none;
+position:absolute;
+top:100%;
+left:0;
+min-width:270px;
+background:#fff;
+box-shadow:0 8px 20px rgba(0,0,0,.12);
+border-radius:10px;
+overflow:hidden;
+z-index:9999;
+}
+
+.dropdown-content a{
+display:block;
+padding:14px 18px;
+text-decoration:none;
+color:#222;
+font-weight:600;
+border-bottom:1px solid #eee;
+transition:.3s;
+white-space:nowrap;
+}
+
+.dropdown-content a:hover{
+background:#f3faf3;
+padding-left:24px;
+color:#0b3d2e;
+}
+
+.dropdown:hover .dropdown-content{
+display:block;
+}
+
+.btn{
+background:#ff6600;
+color:#fff;
+border:none;
+padding:12px 22px;
+border-radius:6px;
+font-weight:bold;
+cursor:pointer;
+}
+
+/* HERO */
+.hero{
+height:320px;
+background:url('agriculture-banner.jpg') center/cover no-repeat;
+}
+
+/* DETAILS */
+.section{
+max-width:1200px;
+margin:auto;
+padding:50px 20px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.left img{
+width:100%;
+max-width:520px;
+border-radius:14px;
+background:#fff;
+padding:10px;
+box-shadow:0 8px 18px rgba(0,0,0,.08);
+}
+
+.right h2{
+font-size:34px;
+color:#0b3d2e;
+margin-bottom:20px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+background:#fff;
+box-shadow:0 8px 18px rgba(0,0,0,.08);
+}
+
+th,td{
+padding:14px;
+border:1px solid #ddd;
+text-align:left;
+}
+
+th{
+background:#ff6600;
+color:#fff;
+}
+
+.btn-group{
+margin-top:20px;
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+}
+
+.back-btn,.inquiry-btn{
+display:inline-block;
+padding:12px 28px;
+color:#fff;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+}
+
+.back-btn{background:#ff6600;}
+.inquiry-btn{background:#25D366;}
+
+/* FOOTER */
+.footer-top{
+background:#003b8f;
+color:#fff;
+padding:35px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:35px;
+}
+
+.footer-top h3{margin-bottom:15px;}
+.footer-top p{margin:10px 0;}
+
+.footer-bottom{
+background:#ff5a1f;
+color:#fff;
+padding:14px 20px;
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+}
+
+.socials{
+display:flex;
+gap:18px;
+}
+
+.socials a{
+color:#fff;
+text-decoration:none;
+font-size:26px;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+.navbar{
+flex-direction:column;
+gap:15px;
+}
+
+.left-menu,.center-logo,.right-menu{
+width:100%;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.brand{font-size:26px;}
+.hero{height:220px;}
+
+.section{
+grid-template-columns:1fr;
+}
+
+.right h2{
+font-size:28px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+
+<div class="left-menu">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+
+<div class="dropdown">
+<a href="#" class="dropbtn">Products ▼</a>
+<div class="dropdown-content">
+<a href="agriculture.html">1. Agricultural Products</a>
+</div>
+</div>
+
+<a href="contact.html">Contact</a>
+</div>
+
+<div class="center-logo">
+<img src="logo.png">
+<div class="brand">Airux Global</div>
+</div>
+
+<div class="right-menu">
+<button class="btn">Request Quote</button>
+</div>
+
+</div>
+
+<div class="hero"></div>
+
+<div class="section">
+
+<div class="left">
+<img src="basmati.jpg">
+</div>
+
+<div class="right">
+
+<h2>Basmati Rice</h2>
+
+<table>
+<tr><th colspan="2">Product Details</th></tr>
+<tr><td>Type</td><td>1121 / Traditional</td></tr>
+<tr><td>Color</td><td>White / Golden</td></tr>
+<tr><td>Average Length</td><td>8.3 mm+</td></tr>
+<tr><td>Broken</td><td>2% Max</td></tr>
+<tr><td>Moisture</td><td>12% Max</td></tr>
+<tr><td>Purity</td><td>95% Min</td></tr>
+<tr><td>Packaging</td><td>1kg to 50kg</td></tr>
+<tr><td>MOQ</td><td>25 Ton</td></tr>
+<tr><td>Origin</td><td>India</td></tr>
+</table>
+
+<div class="btn-group">
+<a href="agriculture.html" class="back-btn">Back</a>
+<a href="https://wa.me/916354132629?text=Hello%20Airux%20Global,%20I%20am%20interested%20in%20Basmati%20Rice." class="inquiry-btn">Send Inquiry</a>
+</div>
+
+</div>
+</div>
+
+<div class="footer-top">
+<div>
+<h3>Quick Links</h3>
+
+<p><a href="index.html">Home</a></p>
+<p><a href="about.html">About Us</a></p>
+<p><a href="agriculture.html">Products</a></p>
+<p><a href="contact.html">Contact us</a></p>
+
+</div>
+
+<style id="footerquick3">
+.footer-top a{
+color:#fff;
+text-decoration:none;
+font-weight:500;
+}
+
+.footer-top a:hover{
+text-decoration:underline;
+color:#ffd9c7;
+}
+</style>
+<div>
+<h3>Get in Touch</h3>
+<p>📞 +91 6354132629</p>
+<p>✉️ airuxglobal@gmail.com</p>
+<p>📍 Surat, Gujarat, India</p>
+</div>
+
+<div>
+<h3>Product</h3>
+<p><a href="agriculture.html">Agricultural Products</a></p>
+</div>
+
+<div>
+<h3>Membership</h3>
+<p>Proud Member of Trade Council</p>
+</div>
+</div>
+
+<div class="footer-bottom">
+<div>© 2026 Airux Global Export. All Rights Reserved</div>
+<div class="socials">
+<a href="#">f</a>
+<a href="#">in</a>
+<a href="#">◎</a>
+</div>
+</div>
+
+</body>
+</html>
